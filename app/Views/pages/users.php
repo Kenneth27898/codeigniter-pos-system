@@ -2,36 +2,53 @@
 <html>
 <head>
     <title>User Accounts - POS System</title>
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
 <body>
 
-    <h1>User Accounts</h1>
+    <header class="header">
+        <div class="container">
+            <h1>User Accounts</h1>
 
-    <table border="1" cellpadding="8">
-        <tr>
-            <th>Username</th>
-            <th>Full Name</th>
-            <th>Created At</th>
-        </tr>
+            <nav class="nav">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/customers">Customers</a>
+                <a href="/users">Users</a>
+            </nav>
+        </div>
+    </header>
 
-        <?php foreach ($users as $user): ?>
-            <tr>
-                <td><?= $user['username'] ?></td>
-<td><?= $user['full_name'] ?></td>
-<td><?= $user['created_at'] ?></td>
-            </tr>
-        <?php endforeach; ?>
+    <main class="container">
+        <section class="card">
+            <h2>User List</h2>
 
-    </table>
+            <p class="subtitle">
+                User account information stored in the POS database.
+            </p>
 
-    <br>
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <th>Full Name</th>
+                    <th>Created At</th>
+                </tr>
 
-    <nav>
-    <a href="/">Home</a> |
-    <a href="/about">About</a> |
-    <a href="/customers">Customers</a> |
-    <a href="/users">Users</a>
-</nav>
+                <?php foreach ($users as $user): ?>
+                    <tr>
+                        <td><?= $user['username'] ?></td>
+                        <td><?= $user['full_name'] ?></td>
+                        <td><?= $user['created_at'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>POS System</p>
+    </footer>
 
 </body>
 </html>

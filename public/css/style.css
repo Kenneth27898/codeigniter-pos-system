@@ -1,0 +1,129 @@
+/* Simple POS System Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.header {
+    background: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.header .container {
+    margin: 0 auto;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.nav {
+    margin-top: 12px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 18px;
+    font-size: 14px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+.subtitle {
+    color: #666;
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background: #444;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th,
+td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #222;
+    color: white;
+}
+
+tr:hover {
+    background: #f7f7f7;
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+    margin: 30px 0;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 94%;
+    }
+
+    .nav a {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+    }
+}

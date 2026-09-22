@@ -2,35 +2,53 @@
 <html>
 <head>
     <title>Customer Accounts - POS System</title>
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
 <body>
 
-    <h1>Customer Accounts</h1>
+    <header class="header">
+        <div class="container">
+            <h1>Customer Accounts</h1>
 
-    <table border="1" cellpadding="8">
-        <tr>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-        </tr>
+            <nav class="nav">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/customers">Customers</a>
+                <a href="/users">Users</a>
+            </nav>
+        </div>
+    </header>
 
-        <?php foreach ($customers as $customer): ?>
-            <tr>
-                <td><?= $customer['full_name'] ?></td>
-                <td><?= $customer['email'] ?></td>
-                <td><?= $customer['phone'] ?></td>
-            </tr>
-        <?php endforeach; ?>
+    <main class="container">
+        <section class="card">
+            <h2>Customer List</h2>
 
-    </table>
+            <p class="subtitle">
+                Customer information stored in the POS database.
+            </p>
 
-    <br>
+            <table>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
 
-<nav>
-    <a href="/">Home</a> |
-    <a href="/about">About</a> |
-    <a href="/customers">Customers</a> |
-    <a href="/users">Users</a>
-</nav>
+                <?php foreach ($customers as $customer): ?>
+                    <tr>
+                        <td><?= $customer['full_name'] ?></td>
+                        <td><?= $customer['email'] ?></td>
+                        <td><?= $customer['phone'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>POS System</p>
+    </footer>
+
 </body>
 </html>
